@@ -27,5 +27,5 @@ jobs:
     - run: npm ci
     - run:
           touch .env
-          echo "${{ secrects.PROD }}" > .env
+          echo "PROD=${{ secrets.PROD }}" >> .env
     - run: pm2 restart Backend
